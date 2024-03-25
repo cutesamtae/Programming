@@ -9,28 +9,47 @@
     body {background: black;}
     .box {border: 5px solid white;
             text-align: center; font-family: "SUITE Semibold"; font-size: 3em;}
-    span {animation: ani 3.2s linear infinite;}
-    span:nth-child(1) {animation-delay: 0.4s;}
-    span:nth-child(2) {animation-delay: 0.8s;}
-    span:nth-child(3) {animation-delay: 1.2s;}
-    span:nth-child(4) {animation-delay: 1.6s;}
-    span:nth-child(5) {animation-delay: 2.0s;}
-    span:nth-child(6) {animation-delay: 2.4s;}
+    span {animation: ani 4s linear infinite;}
+    .box span:nth-child(1) {animation-delay: 0.4s;}
+    .box span:nth-child(2) {animation-delay: 0.8s;}
+    .box span:nth-child(3) {animation-delay: 1.2s;}
+    .box span:nth-child(4) {animation-delay: 1.6s;}
+    .box span:nth-child(5) {animation-delay: 2.0s;}
+    .box span:nth-child(6) {animation-delay: 2.4s;}
     @keyframes ani {
-        0%, 100% {color: white; text-shadow: 
-                                    0 0 20px gold,
-                                    0 0 40px gold,
-                                    0 0 60px gold,
-                                    0 0 80px gold,
-                                    0 0 100px gold,
-                                    0 0 120px gold;}
+        0%, 100% {color: white; 
+                    text-shadow: 
+                        0 0 20px aqua,
+                        0 0 40px aqua,
+                        0 0 60px aqua,
+                        0 0 80px aqua,
+                        0 0 100px aqua,
+                        0 0 120px aqua;}
         5%, 95% {color: black; text-shadow: none;}
     }
+    .box1 {border: 5px solid white;
+            text-align: center; font-family: "SUITE Semibold"; font-size: 3em;}
+    .box1 span:nth-child(6) {animation-delay: 0.4s;}
+    .box1 span:nth-child(5) {animation-delay: 0.8s;}
+    .box1 span:nth-child(4) {animation-delay: 1.2s;}
+    .box1 span:nth-child(3) {animation-delay: 1.6s;}
+    .box1 span:nth-child(2) {animation-delay: 2.0s;}
+    .box1 span:nth-child(1) {animation-delay: 2.4s;}
 </style>
 <body>
     
 </body>
     <div class="box">
+        <h1>
+            <span>2</span>
+            <span>4</span>
+            <span>시</span>
+            <span>간</span>
+            <span>운</span>
+            <span>영</span>
+        </h1>
+    </div>
+    <div class="box1">
         <h1>
             <span>2</span>
             <span>4</span>
