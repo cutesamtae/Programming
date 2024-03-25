@@ -9,6 +9,12 @@
     body {background: black;}
     .box {border: 5px solid white;
             text-align: center; font-size: 3em;}
+    span {animation: ani 3.2s linear infinite;}
+    span:nth-child(1)
+    @keyframes ani {
+        0%, 100% {color: white;}
+        5%, 95% {color: black;}
+    }
 </style>
 <body>
     
