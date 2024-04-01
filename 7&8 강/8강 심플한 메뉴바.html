@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {background-color: rgb(31, 30, 38);}
+        body {margin: 0; padding: 0; background-color: rgb(31, 30, 38);}
+        .menubox {
+            background: whitesmoke; display: flex;
+            justify-content: flex-end;
+        }
+        a {
+            text-decoration: none; color: black;
+            padding: 12px; font-size: 18px; font-weight: bold;
+            font-family: "SUITE";
+        }
+        a:hover {
+            background: gold;
+
+        }
         .bigbox {display: flex; flex-wrap: wrap;
                  justify-content: flex-end;
                  justify-content: center;
                  justify-content: space-around;
                  justify-content: space-between;
                  justify-content: space-evenly;
-            }
+        }
         .box {width: 200px; height: 200px; margin: 15px;
               overflow: hidden;
               box-shadow: 3px 3px 8px rgb(48, 44, 75);
@@ -22,11 +35,18 @@
         .box:hover {transform: scale(1.2);
                     border-radius: 25px;
                     box-shadow: 0px 0px 8px white;
-            }
+        }
         img{width: inherit; height: inherit;}
     </style>
 </head>
 <body>
+    <div class="menubox">
+        <a href="#">🏠 Home</a>
+        <a href="#">🔍 Search</a>
+        <a href="#">😌 Content</a>
+        <a href="#">👆 Log in</a>
+    </div>
+
     <div class="bigbox">
         <div class="box"><img src="min.jpeg"></div>
         <div class="box"><img src="Flare.jpg"></div>
