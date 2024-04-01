@@ -6,14 +6,22 @@
     <title>Document</title>
     <style>
         .bigbox {display: flex;}
-        .box {width: 200px; height: 200px; margin: 15px;}
+        .box {width: 200px; height: 200px; margin: 15px;
+              overflow: hidden;
+              box-shadow: 3px 3px 8px gray;
+              cursor: pointer;
+              transition: 0.5s;
+        }
+        .box:hover {transform: scale(1.2);
+                    border-radius: 40px;
+            }
         img{width: inherit; height: inherit;}
     </style>
 </head>
 <body>
     <div class="bigbox">
-        <div class="box"><img src="spam.jpg"></div>
-        <div class="box"><img src="spamlight.jpg"></div>
+        <div class="box"><img src="min.jpeg"></div>
+        <div class="box"><img src="Flare.jpg"></div>
         <div class="box"><img src="정선재.jpg"></div>
     </div>
 </body>
