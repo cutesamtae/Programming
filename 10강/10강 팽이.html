@@ -8,19 +8,29 @@
         body {
             background: black;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            border: 4px solid red;
         }
         .box {
-            border: 3px solid red;
+            border: 3px solid lightgray;
             width: 200px; height: 200px;
             border-radius: 50%;
             margin: 40px;
-            background: conic-gradient(yellow, aqua);
+            background: repeating-conic-gradient(lightgreen 0deg, lightgreen 30deg, green 30deg, green 60deg);
+        }
+        .box2 {
+            background: repeating-conic-gradient(gold 0deg, gold 30deg, gold 30deg, orange 60deg);
+        }
+        .box3 {
+            background: repeating-conic-gradient(white 0deg, white 30deg, pink 30deg, red 60deg);
         }
         .box:hover {
             animation: ani 0.3s linear infinite;
         }
         @keyframes ani {
-            
+            to{transform: rotate(360deg);}
         }
     </style>
 </head>
