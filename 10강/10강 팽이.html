@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>탑블레이드</title>
+    <style>
+        body {
+            background: black;
+            display: flex;
+        }
+        .box {
+            border: 3px solid red;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            margin: 40px;
+            background: conic-gradient(yellow, aqua);
+        }
+        .box:hover {
+            animation: ani 0.3s linear infinite;
+        }
+        @keyframes ani {
+            
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
 </body>
 </html>
