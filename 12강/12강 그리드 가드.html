@@ -6,7 +6,7 @@
     <title>The China News</title>
     <style>
         body {
-            margin: 2rem;
+            margin: 2rem; font-family: SUITE;
         }
         .box{border: 0px solid red;
              display: grid;
@@ -15,6 +15,14 @@
         .card{border: 0px solid blue; background: beige;
              box-shadow: 2px 2px 5px gray; margin: 16px;
              border-radius: 8px;}
+
+        .card:hover{
+            background: lightpink;
+        }
+
+        .card:active{
+            box-shadow: inset 0 0 10px gray;
+        }
 
         .smallbox{width: 300px; height: 200px;
                  margin: 0 auto;}
