@@ -8,13 +8,20 @@
         body {
             margin: 2rem;
         }
-        .box{border: 3px solid red;
+        .box{border: 0px solid red;
              display: grid;
              grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));}
-        .card{border: 3px solid blue; background: beige;}
+
+        .card{border: 0px solid blue; background: beige;
+             box-shadow: 2px 2px 5px gray; margin: 16px;
+             border-radius: 8px;}
+
         .smallbox{width: 300px; height: 200px;
                  margin: 0 auto;}
+
         img{width: inherit; height: inherit;}
+
+        h1, p{padding-left: 1rem; padding-right: 1rem;}
     </style>
 </head>
 <body>
