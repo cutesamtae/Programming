@@ -6,8 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <button>b1</button>
-    <h3>hello</h3>
-    <img src="banana.png" alt="150px">
+    <button onclick="document.getElementById('h').innerHTML='Hello World!' ">Button_1</button>
+    <button onclick="document.getElementById('h').style.color='red' ">Button_2</button>
+    <button onclick="document.getElementById('h').style.fontSize='30px' ">Button_3</button>
+    <button onclick="document.getElementById('h').style.background='gold' ">Button_4</button>
+    <button onclick="document.getElementById('i').src='stone.png' ">Button_5</button>
+    <h3 id="h">Javascript!</h3>
+    <img id="i" src="banana.png" alt="150px">
 </body>
 </html>
