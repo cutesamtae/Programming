@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        font-family: 'Pretendard';
+        width: 200px; height: 200px;
+        background: lavender;
+        border-radius: 50%;
+        box-shadow: 5px 5px 5px gray;
+        text-align: center;
+        line-height: 200px;
+    }
+    button:nth-child(1) {
+        background: pink;
+    }
+    button:nth-child(2) {
+        background: beige;
+    }
+    button:nth-child(3) {
+        background: skyblue;
+    }
+</style>
+<body>
+    <button id="b1">pink</button>
+    <button id="b2">beige</button>
+    <button id="b3">skyblue</button>
+    <div id="box">I'm a Queen!</div>
+</body>
+<script>
+    var b1 = document.getElementById('b1');
+    var b2 = document.getElementById('b2');
+    var b3 = document.getElementById('b3');
+    var box = document.getElementById('box');
+
+    b1.addEventListener('click', () => {
+        box.style.background = 'pink'
+    });
+    b2.addEventListener('click', () => {
+        box.style.background = 'beige'
+    });
+    b3.addEventListener('click', () => {
+        box.style.background = 'skyblue'
+    });
+</script>
+</html>

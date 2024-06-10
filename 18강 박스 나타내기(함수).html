@@ -18,8 +18,16 @@
     </style>
 </head>
 <body>
-    <button onclick="document.getElementById('box').style.display='none' ">X</button>
-    <button onclick="document.getElementById('box').style.display='' ">O</button>
+    <button onclick="hide()">X</button>
+    <button onclick="show()">O</button>
     <div id="box">Hide and Show this box</div>
 </body>
+<script>
+    function hide() {
+        document.getElementById('box').style.display='none';
+    }
+    function show() {
+        document.getElementById('box').style.display='';
+    }
+</script>
 </html>
