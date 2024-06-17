@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .box {
+            border: 0px solid red;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 300vw;
+        }
+        img {width: 100vw;}
+        .bu {
+            border: 0px solid red;
+            display: flex;
+            justify-content: center;
+        }
+        .bu button {
+            width: 10px; height: 12px;
+            border-radius: 50%;
+            background: pink;
+            border: 0;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="box">
+        <img src="https://picsum.photos/id/200/600/100" alt="Oops!">
+        <img src="https://picsum.photos/id/56/600/100" alt="Oops!">
+        <img src="https://picsum.photos/id/354/600/100" alt="Oops!">
+        
+    </div>
+    <div class="bu">
+        <button class="bu1"></button>
+        <button class="bu2"></button>
+        <button class="bu3"></button>
+    </div>
+</body>
+<script>
+    $('button').click(function(){
+        const a = $(this).index();
+        $('.box').css('tranform', `translateX(${-100 * a}vw)`);
+    })
+</script>
+</html>
