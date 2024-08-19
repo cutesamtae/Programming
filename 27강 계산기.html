@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{background: rgb(242, 242, 184);
+        padding: 20px; width: 310px;}
+        form{display: grid;
+        grid-template-columns: repeat(4,65px);
+        grid-auto-rows: 65px; grid-gap: 15px;}
+        input[type="text"] {
+            grid-column: 1/ span 4;
+            box-shadow: 1px 1px 10px hotpink;
+            border: none;
+        }
+        .c{grid-column: 1/ span 3;}
+        input[class="="] {grid-column: span 2;}
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form name="a">
+            <input type="text">
+            <input type="button" value="Clear">
+            <input type="button" value="/">
+            <input type="button" value="1">
+            <input type="button" value="2">
+            <input type="button" value="3">
+            <input type="button" value="*">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="+">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="-">
+            <input type="button" value=".">
+            <input type="button" value="=" class="=">
+        </form>
+    </div>
+</body>
+</html>
