@@ -5,41 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box{background: rgb(242, 242, 184);
+        .box{background: lightgray;
         padding: 20px; width: 310px;}
         form{display: grid;
         grid-template-columns: repeat(4,65px);
         grid-auto-rows: 65px; grid-gap: 15px;}
-        input[type="text"] {
+        input[type="pe"] {
+            font-family: "SUIT Extrabold";
+            border-radius: 5px;
             grid-column: 1/ span 4;
-            box-shadow: 1px 1px 10px hotpink;
+            box-shadow: 1px 1px 10px gray;
             border: none;
+            font-size: 1.5rem;
+            padding-right: 10px;
         }
         .c{grid-column: 1/ span 3;}
-        input[class="="] {grid-column: span 2;}
+        input[class="c"] {
+            grid-column: span 3;
+            background: gray;
+            color: white;
+        }
+        input[class="op"] {
+            background: skyblue;
+        }
+        input[class="e"] {
+            grid-column: span 2;
+            background: skyblue;
+        }
+        input[type="button"] {
+            border-radius: 5px;
+            border: none;
+            font-size: 1.3rem;
+            font-family: "SUIT Extrabold";
+            box-shadow: 1px 1px 10px gray;
+        }
+        input[type="button"]:hover {
+            background: lightcyan;
+            color: black;
+        }
+        input[type="button"]:active {
+            box-shadow: inset 3px 3px 10px gray;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+            background-position: 0% 50%;
+            }
+        }
+        input[type="button"]:not(.op):not(.c):not(.e) {
+            background: whitesmoke;
+            animation: ani 1s ease-in-out infinite alternate-reverse;
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            animation: gradient 8s ease infinite;
+        }
+}
         
     </style>
 </head>
 <body>
     <div class="box">
         <form name="a">
-            <input type="text">
-            <input type="button" value="Clear">
-            <input type="button" value="/">
-            <input type="button" value="1">
-            <input type="button" value="2">
-            <input type="button" value="3">
-            <input type="button" value="*">
-            <input type="button" value="4">
-            <input type="button" value="5">
-            <input type="button" value="6">
-            <input type="button" value="+">
-            <input type="button" value="7">
-            <input type="button" value="8">
-            <input type="button" value="9">
-            <input type="button" value="-">
-            <input type="button" value=".">
-            <input type="button" value="=" class="=">
+            <input type="pe" name="b">
+            <input type="button" value="Clear" onclick="document.a.b.value = ' ' " class="c">
+            <input type="button" value="/" onclick="document.a.b.value += '/' " class="op">
+            <input type="button" value="1" onclick="document.a.b.value += '1' ">
+            <input type="button" value="2" onclick="document.a.b.value += '2' ">
+            <input type="button" value="3" onclick="document.a.b.value += '3' ">
+            <input type="button" value="*" onclick="document.a.b.value += '*' " class="op">
+            <input type="button" value="4" onclick="document.a.b.value += '4' ">
+            <input type="button" value="5" onclick="document.a.b.value += '5' ">
+            <input type="button" value="6" onclick="document.a.b.value += '6' ">
+            <input type="button" value="+" onclick="document.a.b.value += '+' " class="op">
+            <input type="button" value="7" onclick="document.a.b.value += '7' ">
+            <input type="button" value="8" onclick="document.a.b.value += '8' ">
+            <input type="button" value="9" onclick="document.a.b.value += '9' ">
+            <input type="button" value="-" onclick="document.a.b.value += '-' " class="op">
+            <input type="button" value="." onclick="document.a.b.value += '.' ">
+            <input type="button" value="0" onclick="document.a.b.value += '0' ">
+            <input type="button" value="=" onclick="document.a.b.value += '=' " class="e">
         </form>
     </div>
 </body>
