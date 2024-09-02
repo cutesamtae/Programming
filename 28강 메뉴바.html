@@ -11,8 +11,18 @@
             background: url('omgchina.png') no-repeat top center /cover;
             height: 100vh;
         }
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+        .iconbox {
+            display: flex;
+            list-style: none;
+        }
        .menubox {
-        border: 2px solid red;
+        display: grid; grid-template-columns: 1fr 7fr 3fr;
+        background: lightgray;
+        padding: 3px 15px;
        } 
     </style>
 </head>
@@ -22,15 +32,15 @@
             <a href=""><img src="china.png" width="10%"></a>
         </div>
         <ul class="menu">
-            <li><a href="">什么是中国共产党？</a></li>
-            <li><a href="">你在中国共产党做什么工作?</a></li>
-            <li><a href="">你想退出中国共产党吗?</a></li>
-            <li><a href="">援助北朝鲜</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">Invite</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Tianmen</a></li>
         </ul>
         <ul class="iconbox">
-            <li><a href=""><img src="weibo.png" width="3%"></a></li>
-            <li><a href=""><img src="TikTok.png" width="3%"></a></li>
-            <li><a href=""><img src="bilibili.png" width="3%"></a></li>
+            <li><a href=""><img src="weibo.png" width="10%"></a></li>
+            <li><a href=""><img src="TikTok.png" width="10%"></a></li>
+            <li><a href=""><img src="bilibili.png" width="10%"></a></li>
         </ul>
     </div>
 </body>
