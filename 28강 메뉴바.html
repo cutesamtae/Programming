@@ -4,46 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/6"></script>
-    <style>
-        body {
-            margin: 0;
-            font-family: "Noto Sans SC";
-            background: url('omgchina.png') no-repeat top center /cover;
-            height: 100vh;
-        }
-        .menu {
-            display: flex;
-            list-style: none;
-        }
-        .iconbox {
-            display: flex;
-            list-style: none;
-        }
-       .menubox {
-        display: grid; grid-template-columns: 1fr 7fr 3fr;
-        background: lightgray;
-        padding: 3px 15px;
-       } 
-    </style>
+    <script src="https://kit.fontawesome.com/6a7ee9b954.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="menubox">
-        <div class="logo">
-            <a href=""><img src="china.png" width="10%"></a>
+    <div class="bigbox">
+        <div class="logobox">
+            <i class="fa-solid fa-shield"></i>
+            <a href="https://www.youtube.com/@rlarhsid">Tencent Security Team</a>
         </div>
-        <ul class="menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Invite</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">Tianmen</a></li>
-        </ul>
-        <ul class="iconbox">
-            <li><a href=""><i class="fa-brands fa-facebook"></a></li>
-            <li><a href=""><img src="weibo.png" width="10%"></a></li>
-            <li><a href=""><img src="TikTok.png" width="10%"></a></li>
-            <li><a href=""><img src="bilibili.png" width="10%"></a></li>
-        </ul>
+        <div class="menubox">
+            <div class="menu"><a href="">Home</a></div>
+            <div class="menu-hassub"><a href="">Gallery</a>
+                <div class="sub">
+                    <div class="sub-menu"><a href="">A</a></div>
+                    <div class="sub-menu"><a href="">B</a></div>
+                    <div class="sub-menu"><a href="">C</a></div>
+                    <div class="sub-menu"><a href="">D</a></div>
+                </div>
+            </div>
+            <div class="menu-hassub"><a href="">Wedding</a>
+                <div class="sub">
+                    <div class="sub-menu"><a href="">E</a></div>
+                    <div class="sub-menu"><a href="">F</a></div>
+                    <div class="sub-menu"><a href="">G</a></div>
+                </div>
+            </div>
+            <div class="menu"><a href="">FAQ</a></div>
+            <div class="menu"><a href="">Contact</a></div>
+        </div>
+        <div class="iconbox">
+        </div>
     </div>
 </body>
 </html>
