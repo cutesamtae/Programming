@@ -7,12 +7,53 @@
     <script src="https://kit.fontawesome.com/6a7ee9b954.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        body {font-family: Wanted Sans;}
+        body {font-family: "Wanted Sans SemiBold";}
         .bigbox {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: lightgrey;
+            background: black;
+            border-radius: 12px;
+            padding: 8px 15px;
+        }
+        .logobox {
+            font-size: 24px;
+        }
+        .logobox i {
+            color: gold;
+        }
+        .menubox, .iconbox {
+            display: flex;
+        }
+        .menu, .icon {
+            padding: 10px;
+            position: relative;
+        }
+        .menu:hover, .icon:hover {
+            background: rgb(62, 62, 62);
+            border-radius: 12px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        .sub {
+            display: block;
+            min-width: 100px;
+            background: black;
+            position: absolute;
+            top: 100%;
+            left: 0%;
+        }
+        .sub-menu {
+            width: 100%;
+            padding: 8px;
+        }
+        .sub-menu a:hover {
+            background: rgb(62, 62, 62);
+        }
+        .sub-menu a {
+            display: block;
         }
     </style>
 </head>
@@ -20,11 +61,11 @@
     <div class="bigbox">
         <div class="logobox">
             <i class="fa-solid fa-shield"></i>
-            <a href="https://www.youtube.com/@rlarhsid">Rlarhsid Security Team</a>
+            <a href="https://www.youtube.com/@rlarhsid">RST</a>
         </div>
         <div class="menubox">
             <div class="menu"><a href="">Home</a></div>
-            <div class="menu-hassub"><a href="">Gallery</a>
+            <div class="menu hassub"><a href="">Gallery</a>
                 <div class="sub">
                     <div class="sub-menu"><a href="">A</a></div>
                     <div class="sub-menu"><a href="">B</a></div>
@@ -32,7 +73,7 @@
                     <div class="sub-menu"><a href="">D</a></div>
                 </div>
             </div>
-            <div class="menu-hassub"><a href="">Wedding</a>
+            <div class="menu hassub"><a href="">Wedding</a>
                 <div class="sub">
                     <div class="sub-menu"><a href="">E</a></div>
                     <div class="sub-menu"><a href="">F</a></div>
@@ -44,8 +85,20 @@
         </div>
         <div class="iconbox">
             <div class="icon"><a href=""><i class="fa-brands fa-x-twitter"></i></a></div>
-            <div class="icon"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+            <div class="icon"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
         </div>
     </div>
 </body>
+<script>
+    $(document).ready(function(){
+        $('.hassub').hover(
+            function(){
+                $(this).children('.sub').stop(true, true).slideDown(200);
+            },
+            function(){
+                $(this).children('.sub').stop(true, true).slideUp(200);
+            }
+        )
+    });
+</script>
 </html>
