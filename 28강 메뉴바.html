@@ -46,7 +46,7 @@
             left: 0%;
         }
         .sub-menu {
-            width: 100%;
+            width: 80%;
             padding: 8px;
         }
         .sub-menu a:hover {
@@ -54,6 +54,20 @@
         }
         .sub-menu a {
             display: block;
+            padding: 10px 15px;
+            border-radius: 12px;
+        }
+        /* 햄버거 토글 메뉴 */
+        .ham {
+            font-size: 24px;
+            color: white;
+            position: absolute;
+            right: 32px;
+            display: none;
+        }
+        /* 반응형 웹 디자인 */
+        @media screen and (max-width:800px){
+            .ham {display: block;}
         }
     </style>
 </head>
@@ -67,10 +81,10 @@
             <div class="menu"><a href="">Home</a></div>
             <div class="menu hassub"><a href="">Gallery</a>
                 <div class="sub">
-                    <div class="sub-menu"><a href="">A</a></div>
-                    <div class="sub-menu"><a href="">B</a></div>
-                    <div class="sub-menu"><a href="">C</a></div>
-                    <div class="sub-menu"><a href="">D</a></div>
+                    <div class="sub-menu"><a href="10강 팽이.html">Spin</a></div>
+                    <div class="sub-menu"><a href="23강 이미지슬라이드.html">Image</a></div>
+                    <div class="sub-menu"><a href="27강 계산기.html">Calculators</a></div>
+                    <div class="sub-menu"><a href="26강 다크모드.html">News</a></div>
                 </div>
             </div>
             <div class="menu hassub"><a href="">Wedding</a>
@@ -84,9 +98,10 @@
             <div class="menu"><a href="">Contact</a></div>
         </div>
         <div class="iconbox">
-            <div class="icon"><a href=""><i class="fa-brands fa-x-twitter"></i></a></div>
-            <div class="icon"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="icon"><a href="https://x.com/rlarhsid?s=21&t=CqXJyDM9ICK-tvlO49Fpmw"><i class="fa-brands fa-x-twitter"></i></a></div>
+            <div class="icon"><a href="https://www.instagram.com/rlarhsid/"><i class="fa-brands fa-instagram"></i></a></div>
         </div>
+        <a href="" class="ham"><i class="fa fa-bars"></i></a>
     </div>
 </body>
 <script>
