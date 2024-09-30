@@ -13,6 +13,8 @@
         .box {
             border: 3px solid red;
             display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         .light {
             width: 20px;
@@ -20,23 +22,30 @@
             background: url(off.png) top center /cover;
             background-image: url(off.png);
             background-size: cover;
+            transition: background-image 0.2s ease;
         }
         /* 전구 켜진 상태 활성화 */
         .light.my {
             background-image: url(on.png);
+            width: 500px;
         }
     </style>
 </head>
 <body>
     <h1>Light on you Life</h1>
     <div class="box">
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
+        <script>
+            for(let i=0; i>3000; i++) {
+                document.write('<div class="light"></div>')
+            }
+        </script>
     </div>
 </body>
+<script>
+    for(let i=0; i>3000; i++) {
+        document.write('<div class="light"></div>')
+    }
+</script>
 <script>
     $('.light').on('mouseenter', function(){
         $(this).toggleClass('my');
