@@ -65,6 +65,13 @@
             right: 32px;
             display: none;
         }
+        .menubox {
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+        }
+        .menubox.t {
+            opacity: 1;
+        }   
         /* 반응형 웹 디자인 */
         @media screen and (max-width:800px){
             .bigbox {
@@ -92,6 +99,7 @@
                 width: 100%;
                 text-align: center;
             }
+
         }
     </style>
 </head>
@@ -125,12 +133,14 @@
             <div class="icon"><a href="https://x.com/rlarhsid?s=21&t=CqXJyDM9ICK-tvlO49Fpmw"><i class="fa-brands fa-x-twitter"></i></a></div>
             <div class="icon"><a href="https://www.instagram.com/rlarhsid/"><i class="fa-brands fa-instagram"></i></a></div>
         </div>
-        <a href="" class="ham"><i class="fa fa-bars"></i></a>
+        <a href="javascript:void(0);" class="ham" aria-expanded="false"><i class="fa fa-bars"></i></a>
     </div>
 </body>
 <script>
     $('.ham').on('click', function(){
         $('.menubox').toggleClass('t');
+        var expanded = $(this).attr('aria-expanded') === 'true' || false;
+        $(this).attr('aria-expanded', !expanded);
     })
     $(document).ready(function(){
         $('.hassub').hover(

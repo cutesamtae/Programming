@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Times New Roman';
+        }
+        .box {
+            border: 3px solid red;
+            display: flex;
+        }
+        .light {
+            width: 20px;
+            height: 30px;
+            background: url(off.png) top center /cover;
+            background-image: url(off.png);
+            background-size: cover;
+        }
+        /* 전구 켜진 상태 활성화 */
+        .light.my {
+            background-image: url(on.png);
+        }
+    </style>
+</head>
+<body>
+    <h1>Light on you Life</h1>
+    <div class="box">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </div>
+</body>
+<script>
+    $('.light').on('mouseenter', function(){
+        $(this).toggleClass('my');
+    });
+</script>
+</html>
