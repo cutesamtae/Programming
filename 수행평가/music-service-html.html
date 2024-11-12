@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Service</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* 사이드바 스타일 */
+        .sidebar {
+            width: 240px;
+            background-color: #fff;
+            border-right: 1px solid #e5e5e5;
+            padding: 20px;
+        }
+
+        .sidebar-menu a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .sidebar-menu a:hover {
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .sidebar-menu a.active {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* 메인 콘텐츠 스타일 */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* 현재 재생 중인 곡 정보 */
+        .now-playing {
+            display: flex;
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .album-art {
+            width: 250px;
+            height: 250px;
+            background-color: #eee;
+            margin-right: 30px;
+            border-radius: 10px;
+        }
+
+        .track-info {
+            flex: 1;
+        }
+
+        .track-info h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .track-info .artist {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* 컨트롤 패널 */
+        .control-panel {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .control-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .control-buttons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        .play-button {
+            width: 50px;
+            height: 50px;
+            background-color: #2563eb !important;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background-color: #eee;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .progress {
+            width: 30%;
+            height: 100%;
+            background-color: #2563eb;
+            border-radius: 5px;
+            transition: width 0.1s ease;
+        }
+
+        .time-info {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 12px;
+        }
+
+        /* 재생 목록 */
+        .playlist {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .playlist-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+
+        .playlist-item:hover {
+            background-color: #f5f5f5;
+        }
+
+        .playlist-item.active {
+            background-color: #e8f0fe;
+        }
+
+        .playlist-item img {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .playlist-item-info {
+            flex: 1;
+        }
+
+        .playlist-item-info .title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .playlist-item-info .artist {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .playlist-item .duration {
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* 볼륨 컨트롤 */
+        .volume-control {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background-color: #fff;
+            border-top: 1px solid #e5e5e5;
+            display: flex;
+            align-items: center;
+        }
+
+        .volume-slider {
+            width: 100px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 사이드바 -->
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <a href="#" class="active">홈</a>
+                <a href="#">검색</a>
+                <a href="#">내 라이브러리</a>
+                <a href="#">최근 재생</a>
+                <hr style="margin: 15px 0;">
+                <h3 style="margin: 10px 0;">플레이리스트</h3>
+                <a href="#">좋아요 표시한 곡</a>
+                <a href="#">내 플레이리스트 #1</a>
+                <a href="#">드라이브 뮤직</a>
+            </div>
+        </div>
+
+        <!-- 메인 콘텐츠 -->
+        <div class="main-content">
+            <!-- 현재 재생 중인 곡 정보 -->
+            <div class="now-playing">
+                <img src="1.webp" alt="Album Art" class="album-art">
+                <div class="track-info">
+                    <h1>밤공기</h1>
+                    <div class="artist">조현우</div>
+                    <div>앨범: 조현우 두번째 이야기</div>
+                    <div>장르: 발라드</div>
+                </div>
+            </div>
+
+            <!-- 컨트롤 패널 -->
+            <div class="control-panel">
+                <div class="control-buttons">
+                    <button id="shuffle">🔀</button>
+                    <button id="prev">⏮</button>
+                    <button id="play" class="play-button">▶</button>
+                    <button id="next">⏭</button>
+                    <button id="repeat">🔁</button>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="time-info">
+                    <span>1:15</span>
+                    <span>3:45</span>
+                </div>
+            </div>
+
+            <!-- 재생 목록 -->
+            <div class="playlist">
+                <div class="playlist-header">
+                    <h2>재생 목록</h2>
+                </div>
+                <div class="playlist-items">
+                    <div class="playlist-item active">
+                        <img src="2.jpg" alt="thumbnail">
+                        <div class="playlist-item-info">
+                            <div class="title">Dreams</div>
+                            <div class="artist">이루마 • Piano Collection</div>
+                        </div>
+                        <div class="duration">3:45</div>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="3.jpg" alt="thumbnail">
+                        <div class="playlist-item-info">
+                            <div class="title">봄날</div>
+                            <div class="artist">방탄소년단 • You Never Walk Alone</div>
+                        </div>
+                        <div class="duration">4:12</div>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="4.jpg" alt="thumbnail">
+                        <div class="playlist-item-info">
+                            <div class="title">첫눈처럼 너에게 가겠다</div>
+                            <div class="artist">에일리 • 도깨비 OST</div>
+                        </div>
+                        <div class="duration">3:56</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 볼륨 컨트롤 -->
+    <div class="volume-control">
+        <span>🔊</span>
+        <input type="range" min="0" max="100" value="80" class="volume-slider">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            let isPlaying = false;
+
+            // 재생/일시정지 버튼 토글
+            $('#play').click(function() {
+                isPlaying = !isPlaying;
+                $(this).html(isPlaying ? '⏸' : '▶');
+            });
+
+            // 재생 목록 아이템 클릭 이벤트
+            $('.playlist-item').click(function() {
+                $('.playlist-item').removeClass('active');
+                $(this).addClass('active');
+                
+                // 곡 정보 업데이트
+                const title = $(this).find('.title').text();
+                const artist = $(this).find('.artist').text().split('•')[0].trim();
+                
+                $('.track-info h1').text(title);
+                $('.track-info .artist').text(artist);
+                
+                // 재생 시작
+                $('#play').html('⏸');
+                isPlaying = true;
+            });
+
+            // 프로그레스 바 클릭 이벤트
+            $('.progress-bar').click(function(e) {
+                const width = $(this).width();
+                const clickX = e.pageX - $(this).offset().left;
+                const percentage = (clickX / width) * 100;
+                
+                $('.progress').css('width', percentage + '%');
+            });
+
+            // 볼륨 슬라이더 이벤트
+            $('.volume-slider').on('input', function() {
+                const volume = $(this).val();
+                // 볼륨 조절 로직 추가
+            });
+        });
+    </script>
+</body>
+</html>

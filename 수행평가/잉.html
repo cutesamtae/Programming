@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Service</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        /* 기본 스타일 설정 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background-color: #f5f5f5; }
+        .container { display: flex; min-height: 100vh; }
+
+        /* 사이드바 스타일 */
+        .sidebar { width: 240px; background-color: #fff; padding: 20px; border-right: 1px solid #e5e5e5; }
+        .sidebar-menu a {
+            display: block; padding: 10px; color: #333; text-decoration: none; font-size: 14px;
+        }
+        .sidebar-menu a:hover, .sidebar-menu a.active {
+            background-color: #f5f5f5; border-radius: 5px; color: #2563eb; font-weight: bold;
+        }
+
+        /* 메인 콘텐츠 스타일 */
+        .main-content { flex: 1; padding: 20px; }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 사이드바 -->
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <a href="#" class="tab-link active" data-tab="home">홈</a>
+                <a href="#" class="tab-link" data-tab="search">검색</a>
+                <a href="#" class="tab-link" data-tab="library">내 라이브러리</a>
+                <a href="#" class="tab-link" data-tab="recent">최근 재생</a>
+                <hr style="margin: 15px 0;">
+                <h3 style="margin: 10px 0;">플레이리스트</h3>
+                <a href="#" class="tab-link" data-tab="liked">좋아요 표시한 곡</a>
+                <a href="#" class="tab-link" data-tab="my-playlist">내 플레이리스트</a>
+                <a href="#" class="tab-link" data-tab="drive-music">드라이브 뮤직</a>
+            </div>
+        </div>
+
+        <!-- 메인 콘텐츠 -->
+        <div class="main-content">
+            <div id="home" class="content-section active">
+                <h2>홈</h2>
+                <p>홈 화면입니다. 추천 음악과 최신 곡을 확인하세요.</p>
+            </div>
+            <div id="search" class="content-section">
+                <h2>검색</h2>
+                <input type="text" placeholder="음악, 아티스트 검색" style="width: 100%; padding: 10px;">
+            </div>
+            <div id="library" class="content-section">
+                <h2>내 라이브러리</h2>
+                <p>내가 저장한 곡과 앨범을 확인해보세요.</p>
+            </div>
+            <div id="recent" class="content-section">
+                <h2>최근 재생</h2>
+                <p>최근에 재생한 노래 목록입니다.</p>
+            </div>
+            <div id="liked" class="content-section">
+                <h2>좋아요 표시한 곡</h2>
+                <p>내가 좋아요 표시한 곡 목록입니다.</p>
+            </div>
+            <div id="my-playlist" class="content-section">
+                <h2>내 플레이리스트</h2>
+                <p>내가 만든 플레이리스트를 관리하세요.</p>
+            </div>
+            <div id="drive-music" class="content-section">
+                <h2>드라이브 뮤직</h2>
+                <p>드라이브하며 듣기 좋은 음악 모음입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // 탭 전환 기능
+            $('.tab-link').click(function(e) {
+                e.preventDefault();
+
+                // 모든 탭과 콘텐츠 비활성화
+                $('.tab-link').removeClass('active');
+                $('.content-section').removeClass('active');
+
+                // 선택한 탭과 콘텐츠 활성화
+                $(this).addClass('active');
+                $('#' + $(this).data('tab')).addClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
