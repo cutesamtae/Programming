@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9bbd806-8d6f-4654-8e3d-07d79cd85b87" name="Changes" comment="" />
+    <list default="true" id="a9bbd806-8d6f-4654-8e3d-07d79cd85b87" name="Changes" comment="siuisgay">
+      <change beforePath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/playlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/playlist.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,23 +17,22 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "cutesamtae"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cutesamtae&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/cutesamtae/Programming.git",
-    "accountId": "4e7d55d7-3828-4fec-a691-d47248ace60b"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/cutesamtae/Programming.git&quot;,
+    &quot;accountId&quot;: &quot;4e7d55d7-3828-4fec-a691-d47248ace60b&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2ojdBwcSoDt1vd4SkKNdMEsHzi6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,7 +48,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -71,11 +75,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731386786849</updated>
-      <workItem from="1731386788078" duration="780000" />
+      <workItem from="1731386788078" duration="3004000" />
+      <workItem from="1731894247712" duration="3672000" />
     </task>
+    <task id="LOCAL-00001" summary="siuisgay">
+      <option name="closed" value="true" />
+      <created>1731387725652</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731387725652</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="siuisgay" />
+    <option name="LAST_COMMIT_MESSAGE" value="siuisgay" />
   </component>
 </project>
