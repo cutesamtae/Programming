@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9bbd806-8d6f-4654-8e3d-07d79cd85b87" name="Changes" comment="siuisgay">
-      <change beforePath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/playlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../프밍/21005 김홍석/Programming/solmusic-master/playlist.html" afterDir="false" />
-    </list>
+    <list default="true" id="a9bbd806-8d6f-4654-8e3d-07d79cd85b87" name="Changes" comment="rlarhsidisgayzzinda" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731386786849</updated>
       <workItem from="1731386788078" duration="3004000" />
-      <workItem from="1731894247712" duration="3672000" />
+      <workItem from="1731894247712" duration="4477000" />
     </task>
     <task id="LOCAL-00001" summary="siuisgay">
       <option name="closed" value="true" />
@@ -86,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731387725652</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="rlarhsidisgayzzinda">
+      <option name="closed" value="true" />
+      <created>1731904147993</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731904147993</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +97,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="siuisgay" />
-    <option name="LAST_COMMIT_MESSAGE" value="siuisgay" />
+    <MESSAGE value="rlarhsidisgayzzinda" />
+    <option name="LAST_COMMIT_MESSAGE" value="rlarhsidisgayzzinda" />
   </component>
 </project>
