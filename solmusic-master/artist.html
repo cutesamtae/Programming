@@ -1,79 +1,52 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>SolMusic | HTML Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="SolMusic HTML Template">
+	<title>아티스트</title>
 	<meta name="keywords" content="music, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<!-- Favicon -->
+	<!-- 패비콘 -->
 	<link href="img/favicon.ico" rel="shortcut icon"/>
 
-	<!-- Google font -->
+	<!-- 폰트 -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
  
-	<!-- Stylesheets -->
+	<!-- 스타일시트 -->
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/slicknav.min.css"/>
 
-	<!-- Main Stylesheets -->
+	<!-- 메인 스타일시트 -->
 	<link rel="stylesheet" href="css/style.css"/>
-
-
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
 
 </head>
 <body>
-	<!-- Page Preloder -->
+	<!-- 프리로더 -->
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
 
-	<!-- Header section -->
-	<header class="header-section clearfix">
-		<a href="index
-		.html" class="site-logo">
-			<img src="img/logo.png" alt="">
-		</a>
-		<div class="header-right">
-			<a href="#" class="hr-btn">Help</a>
-			<span>|</span>
-			<div class="user-panel">
-				<a href="" class="login">Login</a>
-				<a href="" class="register">Create an account</a>
-			</div> 
-		</div>
-		<ul class="main-menu">
-			<li><a href="index
-				.html">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Pages</a>
-				<ul class="sub-menu">
-					<li><a href="category.html">Category</a></li>
-					<li><a href="playlist.html">Playlist</a></li>
-					<li><a href="artist.html">Artist</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</li>
-			<li><a href="blog.html">News</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</header>
-	<!-- Header section end -->
+	<!-- 헤더 -->
+    <header class="header-section clearfix">
+        <a href="index.html" class="site-logo">
+            <img src="img/logo.png" alt="">
+        </a>
+        <ul class="main-menu">
+            <li><a href="index.html">홈</a></li>
+            <li><a href="category.html">추천</a>
+            <li><a href="playlist.html">모아보기</a>
+            <li><a href="blog.html">포스팅</a></li>
+        </ul>
+    </header>
+    <!-- 헤더 -->            
 
-	<!-- Player section -->
-	<section class="player-section set-bg" data-setbg="img/player-bg.jpg">
+	<!-- 플레이어 섹션 -->
+	<section class="player-section set-bg" data-setbg="img/player-bg.png">
 		<div class="player-box">
 			<div class="tarck-thumb-warp">
 				<div class="tarck-thumb">
-					<img src="img/wave-thumb.jpg" alt="">
+					<img src="img/songs/Odo.jpg" alt="">
 					<button onclick="wavesurfer.playPause();" class="wp-play"></button>
 				</div>
 			</div>
@@ -81,8 +54,8 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="wave-player-info">
-							<h2>Michael Smith</h2>
-							<p>One Night in Ibiza</p>
+							<h2>Odo</h2>
+							<p>Ado</p>
 						</div>
 					</div>
 					<div class="col-lg-4">
@@ -94,7 +67,7 @@
 					</div>
 				</div>
 				<div id="wavePlayer" class="clierfix">
-					<div id="audiowave" data-waveurl="music-files/8.mp3"></div>
+					<div id="audiowave" data-waveurl="music-files/踊.mp3"></div>
 					<div id="currentTime"></div>
 					<div id="clipTime"></div>
 					<!-- Player Controls -->
@@ -108,19 +81,19 @@
 			</div>
 		</div>
 	</section>
-	<!-- Player section end -->
+	<!-- 플레이어 섹션 -->
 
-	<!-- Songs details section -->
+	<!-- 음악정보 섹션 -->
 	<section class="songs-details-section">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3">
 					<div class="song-details-box">
-						<h3>Song Details</h3>
+						<h3>자세히 보기</h3>
 						<ul>
-							<li><strong>Genre:</strong><span>electro, drum & base, minimal</span></li>
-							<li><strong>Tags:</strong><span>quitar, piano, music, electronic music, minimal, chill music, pop, cultural, live, popular</span></li>
-							<li><strong>Instruments:</strong><span>quitar, piano, drums, bass</span></li>
+							<li><strong>구성요소:</strong><span>일렉기타, 드럼 & 베이스, 키보드, 음성효과</span></li>
+							<li><strong>태그:</strong><span>quitar, piano, music, electronic music, minimal, chill music, pop, cultural, live, popular</span></li>
+							<li><strong>악기:</strong><span>일렉기타, 기타, 피아노, 드럼, 베이스</span></li>
 						</ul>
 					</div>
 				</div>
@@ -128,47 +101,47 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="song-details-box">
-								<h3>About the Artist</h3>
+								<h3>Ado에 대해</h3>
 								<div class="artist-details">
-									<img src="img/artist.jpg" alt="">
+									<img src="img/ado.jpg" alt="">
 									<div class="ad-text">
-										<h5>Michael Smith</h5>
+										<h5>Ado</h5>
 										<span>Artist/ Songwriter</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+										<p>일본의 여성 가수. 활동명은 아도(アド)이며 어린 나이에 비해 성숙한 창법과 시원하게 내지르는 목소리가 특징으로 꼽힌다.</p>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-6">
 							<div class="song-details-box">
-								<h3>Song Details</h3>
-								<!-- song -->
+								<h3>같은 아티스트의 노래</h3>
+								<!-- 음악 -->
 								<div class="song-item">
 									<div class="row">
 										<div class="col-xl-5 col-lg-12 col-md-5">
 											<div class="song-info-box">
-												<img src="img/songs/1.jpg" alt="">
+												<img src="img/playlist/shoka.jpg" alt="">
 												<div class="song-info">
-													<h4>Jennifer Brown</h4>
-													<p>One Night in Ibiza</p>
+													<h4>Shoka</h4>
+													<p>Ado</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-xl-7 col-lg-12 col-md-7">
 											<div class="single_player_container">
 												<div class="single_player">
-													<div class="jp-jplayer jplayer" data-ancestor=".jp_container_1" data-url="music-files/1.mp3"></div>
+													<div class="jp-jplayer jplayer" data-ancestor=".jp_container_1" data-url="music-files/Shoka.mp3"></div>
 													<div class="jp-audio jp_container_1" role="application" aria-label="media player">
 														<div class="jp-gui jp-interface">
 					
-															<!-- Player Controls -->
+															<!-- 컨트롤 센터 -->
 															<div class="player_controls_box">
 																<button class="jp-prev player_button" tabindex="0"></button>
 																<button class="jp-play player_button" tabindex="0"></button>
 																<button class="jp-next player_button" tabindex="0"></button>
 																<button class="jp-stop player_button" tabindex="0"></button>
 															</div>
-															<!-- Progress Bar -->
+															<!-- 재생바 -->
 															<div class="player_bars">
 																<div class="jp-progress">
 																	<div class="jp-seek-bar">
@@ -190,33 +163,33 @@
 										</div>
 									</div>
 								</div>
-								<!-- song -->
+								<!-- 음악 -->
 								<div class="song-item">
 									<div class="row">
 										<div class="col-xl-5 col-lg-12 col-md-5">
 											<div class="song-info-box">
-												<img src="img/songs/2.jpg" alt="">
+												<img src="img/playlist/show.jpg" alt="">
 												<div class="song-info">
-													<h4>Michael Smith</h4>
-													<p>Dream in colors</p>
+													<h4>Show</h4>
+													<p>Ado</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-xl-7 col-lg-12 col-md-7">
 											<div class="single_player_container">
 												<div class="single_player">
-													<div class="jp-jplayer jplayer" data-ancestor=".jp_container_2" data-url="music-files/2.mp3"></div>
+													<div class="jp-jplayer jplayer" data-ancestor=".jp_container_2" data-url="music-files/Show.mp3"></div>
 													<div class="jp-audio jp_container_2" role="application" aria-label="media player">
 														<div class="jp-gui jp-interface">
 
-															<!-- Player Controls -->
+															<!-- 컨트롤 센터 -->
 															<div class="player_controls_box">
 																<button class="jp-prev player_button" tabindex="0"></button>
 																<button class="jp-play player_button" tabindex="0"></button>
 																<button class="jp-next player_button" tabindex="0"></button>
 																<button class="jp-stop player_button" tabindex="0"></button>
 															</div>
-															<!-- Progress Bar -->
+															<!-- 재생바 -->
 															<div class="player_bars">
 																<div class="jp-progress">
 																	<div class="jp-seek-bar">
@@ -245,23 +218,23 @@
 			</div>
 		</div>
 	</section>
-	<!-- Songs details section -->
+	<!-- 음악정보 섹션 -->
 	
-	<!-- Similar Songs section -->
+	<!-- 비슷한 음악 섹션 -->
 	<section class="similar-songs-section">
 		<div class="container-fluid">
-			<h3>Similar Songs</h3>
+			<h3>비슷한 곡들</h3>
 			<div class="row">
 				<div class="col-xl-3 col-sm-6">
 					<div class="similar-song">
-						<img class="ss-thumb" src="img/playlist/1.jpg" alt="">
-						<h4>Jennifer Brown</h4>
-						<p>One Night in Ibiza</p>
+						<img class="ss-thumb" src="img/playlist/asu.jpg" alt="">
+						<h4>Dazzling</h4>
+						<p>Asu</p>
 						<div class="single_player">
-							<div class="jp-jplayer jplayer" data-ancestor=".jp_container_8" data-url="music-files/3.mp3"></div>
+							<div class="jp-jplayer jplayer" data-ancestor=".jp_container_8" data-url="music-files/Dazzling.mp3"></div>
 							<div class="jp-audio jp_container_8" role="application" aria-label="media player">
 								<div class="jp-gui jp-interface">
-									<!-- Player Controls -->
+									<!-- 컨트롤 센터 -->
 									<div class="ss-controls">
 										<div class="songs-links">
 											<a href=""><img src="img/icons/p-1.png" alt=""></a>
@@ -275,7 +248,7 @@
 											<button class="jp-stop player_button" tabindex="0"></button>
 										</div>
 									</div>
-									<!-- Progress Bar -->
+									<!-- 재생바 -->
 									<div class="player_bars">
 										<div class="jp-progress">
 											<div class="jp-seek-bar">
@@ -297,14 +270,14 @@
 				</div>
 				<div class="col-xl-3 col-sm-6">
 					<div class="similar-song">
-						<img class="ss-thumb" src="img/playlist/2.jpg" alt="">
-						<h4>Jennifer Brown</h4>
-						<p>One Night in Ibiza</p>
+						<img class="ss-thumb" src="img/playlist/絶対零度.jpg" alt="">
+						<h4>絶対零度</h4>
+						<p>Natori</p>
 						<div class="single_player">
-							<div class="jp-jplayer jplayer" data-ancestor=".jp_container_9" data-url="music-files/4.mp3"></div>
+							<div class="jp-jplayer jplayer" data-ancestor=".jp_container_9" data-url="music-files/Absolute Zero.mp3"></div>
 							<div class="jp-audio jp_container_9" role="application" aria-label="media player">
 								<div class="jp-gui jp-interface">
-									<!-- Player Controls -->
+									<!-- 컨트롤 센터 -->
 									<div class="ss-controls">
 										<div class="songs-links">
 											<a href=""><img src="img/icons/p-1.png" alt=""></a>
@@ -318,7 +291,7 @@
 											<button class="jp-stop player_button" tabindex="0"></button>
 										</div>
 									</div>
-									<!-- Progress Bar -->
+									<!-- 재생바 -->
 									<div class="player_bars">
 										<div class="jp-progress">
 											<div class="jp-seek-bar">
@@ -340,14 +313,14 @@
 				</div>
 				<div class="col-xl-3 col-sm-6">
 					<div class="similar-song">
-						<img class="ss-thumb" src="img/playlist/3.jpg" alt="">
-						<h4>Jennifer Brown</h4>
-						<p>One Night in Ibiza</p>
+						<img class="ss-thumb" src="img/playlist/8:8.jpg" alt="">
+						<h4>8.8</h4>
+						<p>Atarayo</p>
 						<div class="single_player">
-							<div class="jp-jplayer jplayer" data-ancestor=".jp_container_10" data-url="music-files/5.mp3"></div>
+							<div class="jp-jplayer jplayer" data-ancestor=".jp_container_10" data-url="music-files/88.mp3"></div>
 							<div class="jp-audio jp_container_10" role="application" aria-label="media player">
 								<div class="jp-gui jp-interface">
-									<!-- Player Controls -->
+									<!-- 컨트롤 센터 -->
 									<div class="ss-controls">
 										<div class="songs-links">
 											<a href=""><img src="img/icons/p-1.png" alt=""></a>
@@ -361,7 +334,7 @@
 											<button class="jp-stop player_button" tabindex="0"></button>
 										</div>
 									</div>
-									<!-- Progress Bar -->
+									<!-- 재생바 -->
 									<div class="player_bars">
 										<div class="jp-progress">
 											<div class="jp-seek-bar">
@@ -383,14 +356,14 @@
 				</div>
 				<div class="col-xl-3 col-sm-6">
 					<div class="similar-song">
-						<img class="ss-thumb" src="img/playlist/4.jpg" alt="">
-						<h4>Jennifer Brown</h4>
-						<p>One Night in Ibiza</p>
+						<img class="ss-thumb" src="img/playlist/空唄.jpg" alt="">
+						<h4>空唄</h4>
+						<p>Kentaro</p>
 						<div class="single_player">
-							<div class="jp-jplayer jplayer" data-ancestor=".jp_container_11" data-url="music-files/7.mp3"></div>
+							<div class="jp-jplayer jplayer" data-ancestor=".jp_container_11" data-url="music-files/空唄.mp3"></div>
 							<div class="jp-audio jp_container_11" role="application" aria-label="media player">
 								<div class="jp-gui jp-interface">
-									<!-- Player Controls -->
+									<!-- 컨트롤 센터 -->
 									<div class="ss-controls">
 										<div class="songs-links">
 											<a href=""><img src="img/icons/p-1.png" alt=""></a>
@@ -404,7 +377,7 @@
 											<button class="jp-stop player_button" tabindex="0"></button>
 										</div>
 									</div>
-									<!-- Progress Bar -->
+									<!-- 재생바 -->
 									<div class="player_bars">
 										<div class="jp-progress">
 											<div class="jp-seek-bar">
@@ -427,79 +400,42 @@
 			</div>
 		</div>
 	</section>
-	<!-- Similar Songs section end -->
+	<!-- 비슷한 음악 섹션 -->
 
-	<!-- Footer section -->
-	<footer class="footer-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-6 col-lg-7 order-lg-2">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="footer-widget">
-								<h2>About us</h2>
-								<ul>
-									<li><a href="">Our Story</a></li>
-									<li><a href="">Sol Music Blog</a></li>
-									<li><a href="">History</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="footer-widget">
-								<h2>Products</h2>
-								<ul>
-									<li><a href="">Music</a></li>
-									<li><a href="">Subscription</a></li>
-									<li><a href="">Custom Music</a></li>
-									<li><a href="">Footage</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="footer-widget">
-								<h2>Playlists</h2>
-								<ul>
-									<li><a href="">Newsletter</a></li>
-									<li><a href="">Careers</a></li>
-									<li><a href="">Press</a></li>
-									<li><a href="">Contact</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-6 col-lg-5 order-lg-1">
-					<img src="img/logo.png" alt="">
-					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-					<div class="social-links">
-						<a href=""><i class="fa fa-instagram"></i></a>
-						<a href=""><i class="fa fa-pinterest"></i></a>
-						<a href=""><i class="fa fa-facebook"></i></a>
-						<a href=""><i class="fa fa-twitter"></i></a>
-						<a href=""><i class="fa fa-youtube"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Footer section end -->
+	<!-- 푸터 -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-5 order-lg-1">
+                    <img src="img/logo.png" alt="">
+                    <div class="copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                    </div>
+                    <div class="social-links">
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 푸터 -->
 	
-	<!--====== Javascripts & Jquery ======-->
+	<!-- Javascripts & Jquery -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.slicknav.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/mixitup.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="https://kit.fontawesome.com/dfc56d8021.js" crossorigin="anonymous"></script>
 
-	<!-- Audio Players js -->
 	<script src="js/jquery.jplayer.min.js"></script>
 	<script src="js/wavesurfer.min.js"></script>
 
-	<!-- Audio Players Initialization -->
+	<!-- 오디오 플레이어 -->
 	<script src="js/WaveSurferInit.js"></script>
 	<script src="js/jplayerInit.js"></script>
 
